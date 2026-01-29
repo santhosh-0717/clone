@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports | JioHotstar Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background-image: url('https://wallpapercave.com/wp/wp4056410.jpg');
+            /* Cricket Stadium */
+        }
+
+        .live-tag {
+            background-color: #e50914;
+            color: white;
+            padding: 5px 10px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="brand-logo" style="margin-bottom:0; font-size:1.5rem;">JioHotstar</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="tv.html" class="nav-link">TV</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="sports.html" class="nav-link active">Sports</a>
+        </div>
+        <div class="nav-links">
+            <a href="search.html" class="nav-link"><i class="fas fa-search"></i></a>
+            <div class="user-profile" id="userProfileBtn">
+                <i class="fas fa-user"></i>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="#" class="profile-item"><i class="fas fa-user-circle"></i> My Profile</a>
+                    <a href="#" class="profile-item"><i class="fas fa-child"></i> Kids</a>
+                    <div class="divider"></div>
+                    <a href="#" class="profile-item"><i class="fas fa-plus"></i> Add Profile</a>
+                    <a href="login.html" class="profile-item"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="live-tag">Live</span>
+            <h1 class="hero-title">IPL 2026: MI vs CSK</h1>
+            <p class="hero-desc">
+                Catch the electrifying match between Mumbai Indians and Chennai Super Kings live from Wankhede Stadium.
+            </p>
+            <div class="hero-buttons">
+                <a href="watch.html" class="btn btn-primary"><i class="fas fa-play" style="margin-right:8px;"></i> Watch
+                    Live</a>
+                <button class="btn btn-glass"><i class="fas fa-plus" style="margin-right:8px;"></i> Highlights</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="content-section">
+
+        <h3 class="row-title">Live & Upcoming</h3>
+        <div class="card-row-wrapper">
+            <div class="card-container">
+                <a href="watch.html?v=7g4717812921" class="movie-card"><img
+                        src="https://wallpapers.com/images/high/ipl-2023-logo-poster-2560-x-1440-7g4717812921.jpg"
+                        alt="Match"></a>
+                <a href="watch.html?v=99824682" class="movie-card"><img
+                        src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-36440,resizemode-75,msid-99824682/news/sports/ipl-2023-rcb-vs-mi-preview-where-to-watch-live-streaming-probable-xi-match-details.jpg"
+                        alt="Match"></a>
+                <a href="watch.html?v=GT-vs-CSK" class="movie-card"><img
+                        src="https://images.indianexpress.com/2023/05/GT-vs-CSK-IPL-Final-2023.jpg" alt="Match"></a>
+                <a href="watch.html?v=Ftg41jfaUAEwT73" class="movie-card"><img
+                        src="https://pbs.twimg.com/media/Ftg41jfaUAEwT73?format=jpg&name=large" alt="Match"></a>
+            </div>
+        </div>
+
+        <h3 class="row-title" style="margin-top: 40px;">Top Tournaments</h3>
+        <div class="card-row-wrapper">
+            <div class="card-container">
+                <a href="watch.html?v=tourn_epl" class="movie-card"><img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Premier_League_Logo_2016-17.svg/1200px-Premier_League_Logo_2016-17.svg.png"
+                        style="padding:40px; background:#38003c;" alt="EPL"></a>
+                <a href="watch.html?v=tourn_ind" class="movie-card"><img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png"
+                        style="object-fit:contain; padding:20px;" alt="India Cricket"></a>
+                <a href="watch.html?v=tourn_ucl" class="movie-card"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Champions_League.svg/1200px-Champions_League.svg.png"
+                        style="padding:40px; background:#001c4e;" alt="UCL"></a>
+                <a href="watch.html?v=tourn_f1" class="movie-card"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Formula_One_Group_logo.svg/2560px-Formula_One_Group_logo.svg.png"
+                        style="padding:60px; background:white;" alt="F1"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JioHotstar Clone. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | JioHotstar Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .search-container {
+            padding-top: 100px;
+            padding-bottom: 40px;
+            min-height: 100vh;
+        }
+
+        .search-input-wrapper {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 60px;
+            background: #23252b;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8f98b2;
+            font-size: 1.2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 0 40px;
+        }
+
+        .movie-card {
+            width: 100%;
+            /* Override fixed width for grid */
+        }
+    </style>
+    <script>
+        if (!localStorage.getItem('isLoggedIn')) {
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="brand-logo" style="margin-bottom:0; font-size:1.5rem;">JioHotstar</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="tv.html" class="nav-link">TV</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="sports.html" class="nav-link">Sports</a>
+        </div>
+        <div class="nav-links">
+            <a href="search.html" class="nav-link active"><i class="fas fa-search"></i></a>
+            <div class="user-profile" id="userProfileBtn">
+                <i class="fas fa-user"></i>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="#" class="profile-item"><i class="fas fa-user-circle"></i> My Profile</a>
+                    <a href="#" class="profile-item"><i class="fas fa-child"></i> Kids</a>
+                    <div class="divider"></div>
+                    <a href="#" class="profile-item"><i class="fas fa-plus"></i> Add Profile</a>
+                    <a href="login.html" class="profile-item"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" class="search-input" placeholder="Movies, shows and more">
+        </div>
+
+        <h3 class="row-title">Top Results</h3>
+        <div class="results-grid" id="resultsGrid">
+            <!-- Demo Content -->
+            <a href="watch.html?v=1E5baAaEse26fej7uHkjJDveYo" class="movie-card" data-title="The Mandalorian"><img
+                    src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHkjJDveYo.jpg" alt="Poster"></a>
+            <a href="watch.html?v=q6y0Go1tsGEsmtFryDOJo3dEmqu" class="movie-card" data-title="Avengers"><img
+                    src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="Poster"></a>
+            <a href="watch.html?v=9e1d1f1f1f1f1f1f" class="movie-card" data-title="Titanic"><img
+                    src="https://image.tmdb.org/t/p/w500/9e1d1f1f1f1f1f1f.jpg" alt="Poster"></a>
+            <a href="watch.html?v=u3bZgnGQ9T01sWNhyhyVISEQh3y" class="movie-card" data-title="The Last of Us"><img
+                    src="https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyhyVISEQh3y.jpg" alt="Poster"></a>
+            <a href="watch.html?v=kyeqWdyUXW608qlYkRqosgbbJyK" class="movie-card" data-title="Avatar"><img
+                    src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" alt="Poster"></a>
+            <a href="watch.html?v=8c0a4Fk4U24660fQn3o9sP9s6" class="movie-card" data-title="Inception"><img
+                    src="https://image.tmdb.org/t/p/w500/8c0a4Fk4U24660fQn3o9sP9s6.jpg" alt="Poster"></a>
+            <a href="watch.html?v=gEU2QniE6E77NI6lCU6MxlNBvIx" class="movie-card" data-title="Interstellar"><img
+                    src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Poster"></a>
+            <a href="watch.html?v=49WJfeN0moxb9IPfGn8AIqMGskD" class="movie-card" data-title="Stranger Things"><img
+                    src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg" alt="Poster"></a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

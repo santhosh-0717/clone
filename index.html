@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | JioHotstar Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Embedded Login Styles Override */
+        #loginPage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 2000;
+            display: none;
+            /* Hidden by default, shown by script if needed */
+        }
+
+        #mainContent {
+            display: none;
+            /* Hidden by default, shown by script if needed */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Login Interface (Embedded) -->
+    <div id="loginPage" class="login-container">
+        <div class="login-box">
+            <h1 class="login-logo">JioHotstar</h1>
+            <p class="login-subtitle">Stream. Binge. Repeat.</p>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email or Username</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+
+            <div class="signup-link">
+                Don't have an account? <a href="#" class="signup">Sign Up</a>
+            </div>
+
+            <div class="divider"></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="mainContent">
+
+
+
+
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#" class="brand-logo" style="margin-bottom:0; font-size:1.5rem;">JioHotstar</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="tv.html" class="nav-link">TV</a>
+                <a href="movies.html" class="nav-link">Movies</a>
+                <a href="sports.html" class="nav-link">Sports</a>
+            </div>
+            <div class="nav-links">
+                <a href="search.html" class="nav-link"><i class="fas fa-search"></i></a>
+                <div class="user-profile" id="userProfileBtn">
+                    <i class="fas fa-user"></i>
+
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <a href="#" class="profile-item"><i class="fas fa-user-circle"></i> My Profile</a>
+                        <a href="#" class="profile-item"><i class="fas fa-child"></i> Kids</a>
+                        <div class="divider"></div>
+                        <a href="#" class="profile-item"><i class="fas fa-plus"></i> Add Profile</a>
+                        <a href="#" class="profile-item" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Log
+                            Out</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">The Mandalorian</h1>
+                <p class="hero-desc">
+                    After the fall of the Empire, a lone gunfighter makes his way through the outer reaches of the
+                    lawless
+                    galaxy, earning his keep as a bounty hunter.
+                </p>
+                <div class="hero-buttons">
+                    <a href="watch.html?v=eW7Twd85m2g" class="btn btn-primary"><i class="fas fa-play"
+                            style="margin-right:8px;"></i> Watch
+                        Now</a>
+                    <button class="btn btn-glass"><i class="fas fa-plus" style="margin-right:8px;"></i> My List</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Sections -->
+        <div class="content-section">
+
+            <!-- Continue Watching -->
+            <h3 class="row-title">Continue Watching</h3>
+            <div class="card-row-wrapper">
+                <div class="card-container">
+                    <a href="https://youtu.be/eiKV99P86Mc?si=o_hwxqZqYgC5UUtI" class="movie-card">
+                        <img src="dear.png" alt="Poster">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 45%;"></div>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/U3aPapvUihg?si=kx33vr1kS4Lyga22" class="movie-card">
+                        <img src="amaran.png" alt="Poster">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 80%;"></div>
+                        </div>
+                    </a>
+                    <a href="https://youtu.be/odDvRxuP2wQ?si=3R2IxT6hSLcC7dF9" class="movie-card">
+                        <img src="varnasi.png" alt="Poster">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 10%;"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- New Releases -->
+            <h3 class="row-title" style="margin-top: 40px;">New Releases</h3>
+            <div class="card-row-wrapper">
+                <div class="card-container">
+                    <a href="https://youtu.be/_879X68fBL4?si=8mYNowR7MZ60GPmZ" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Poster"></a>
+                    <a href="https://youtu.be/u3V5KDHRQvk?si=qbM0QoYw6dQS7Ft7" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Poster"></a>
+                    <a href="https://youtu.be/OCK9wwkHeg8?si=yeBVJ6XgBovCwKaS" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="Poster"></a>
+                    <a href="https://youtu.be/8gcRTMr-rlg?si=8kf6qV4OIIpLav7V" class="movie-card"><img src="ave.png"
+                            alt="Poster"></a>
+                    <a href="https://youtu.be/8gcRTMr-rlg?si=8kf6qV4OIIpLav7V" class="movie-card"><img src="1.png"
+                            alt="Poster"></a>
+                    <a href="https://youtu.be/UrHkqs-BrcQ?si=uMo82DCGfFr2pPZs" class="movie-card"><img src="2.png"
+                            alt="Poster"></a>
+                </div>
+            </div>
+
+            <!-- Recommended For You (New) -->
+            <h3 class="row-title" style="margin-top: 40px;">Recommended For You</h3>
+            <div class="card-row-wrapper">
+                <div class="card-container">
+                    <a href="https://youtu.be/nldljA0IFzw?si=WzLZRKQM_pk72XJ9" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" alt="Avatar"></a>
+                    <a href="https://youtu.be/nb_fFj_0rq8?si=LdufBG-sBPGcLY1a" class="movie-card"><img src="3.png"
+                            alt="Inception"></a>
+                    <a href="watch.html?v=gEU2QniE6E77NI6lCU6MxlNBvIx" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+                            alt="Interstellar"></a>
+                    <a href="https://youtu.be/mVsJXiI60a0?si=OrziZ7ErijIQSqn9" class="movie-card"><img
+                            src="https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg"
+                            alt="Stranger Things"></a>
+                </div>
+            </div><br><br><br>
+
+            <div class="content-section">
+
+                <!-- Row 1 -->
+                <h3 class="row-title">Latest Releases</h3>
+                <div class="card-row-wrapper">
+                    <div class="card-container">
+                        <!-- Duplicate cards for demo -->
+                        <a href="watch.html?v=1E5baAaEse26fej7uHkjJDveYo" class="movie-card"><img src="5.png"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=q6y0Go1tsGEsmtFryDOJo3dEmqu" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg" alt="Poster"></a>
+                        <a href="watch.html?v=u3bZgnGQ9T01sWNhyhyVISEQh3y" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" alt="Poster"></a>
+                        <a href="watch.html?v=prCitkmC4zq9C15uT4r3aebzM71" class="movie-card"><img src="6.png"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=8Vt6mWEReuy4Of61Lnj5Xj704m8" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg" alt="Poster"></a>
+                        <a href="watch.html?v=d5NXSklXo0qyLXEnNcmwQLDD2DC" class="movie-card"><img src="7.png"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=pFlaoHpR42TIVwxznUP8Iuuqm78" class="movie-card"><img src="8.png"
+                                alt="Poster"></a>
+                    </div>
+                </div>
+
+
+                <!-- Row 2 -->
+                <h3 class="row-title" style="margin-top: 40px;">Trending Now</h3>
+                <div class="card-row-wrapper">
+                    <div class="card-container">
+                        <a href="watch.html?v=r2J02Z2OpNTctfOSN1Ydgii51I3" class="movie-card"><img src="4.png"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=3bhkrj58Vtu7enYsRolD1fZdja1" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Poster"></a>
+                        <a href="watch.html?v=qA5kPYZA7FkVvqnO34FLUBqRPyG" class="movie-card"><img
+                                src="https://m.media-amazon.com/images/M/MV5BODczZDkzMDgtYzRjMi00YWNkLWJhNzMtNGNiMzQxNzE1ZDc3XkEyXkFqcGc@._V1_.jpg"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=wrCVHdkBlBWdJUZPvnJWcBRuhSY" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/wrCVHdkBlBWdJUZPvnJWcBRuhSY.jpg" alt="Poster"></a>
+                        <a href="watch.html?v=xAG7S6X72B8X53d6rA8i6g8hM4j" class="movie-card"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ11dejvKbUJs5DghNsh3B_U6X4TqZoBrH9A&s"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=t6HIqrRAclMCA60NsSmeqe9RmNV" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg" alt="Poster"></a>
+                    </div>
+                </div>
+
+                <!-- Row 3: Recently Added -->
+                <h3 class="row-title" style="margin-top: 40px;">Recently Added</h3>
+                <div class="card-row-wrapper">
+                    <div class="card-container">
+                        <a href="watch.html?v=zEqyD0WeiFSdQGX22He2K8eEn4I" class="movie-card"><img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLGQizUQh0p0Ug0fRRvSXPUoSombsaUP48XA&s"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=8c0a4Fk4U24660fQn3o9sP9s6" class="movie-card"><img
+                                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/07/JujutsuKaisenkeyvisual.jpg/250px-JujutsuKaisenkeyvisual.jpg"
+                                alt="Poster"></a>
+                        <a href="watch.html?v=bQXAqRx2Fgc46uCVWgoPz5L5Dtr" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg" alt="Poster"></a>
+                        <a href="https://youtu.be/8gcRTMr-rlg?si=8kf6qV4OIIpLav7V" class="movie-card"><img src="ave.png"
+                                alt="Poster">
+                        </a>
+                        <a href="watch.html?v=9e1d1f1f1f1f1f1f" class="movie-card"><img
+                                src="https://m.media-amazon.com/images/I/81VAgJoB3BL._AC_UF1000,1000_QL80_.jpg"
+                                alt="Poster">
+                        </a> <!-- Dummy URL fallbacks -->
+                        <a href="watch.html?v=r2J02Z2OpNTctfOSN1Ydgii51I3" class="movie-card"><img
+                                src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Poster"></a>
+                    </div>
+                </div>
+
+            </div>
+
+            </footer>
+
+        </div><!-- End Main Content -->
+
+        <script src="script.js"></script>
+        <script>
+            // SPA Auth Logic
+            const loginPage = document.getElementById('loginPage');
+            const mainContent = document.getElementById('mainContent');
+            const loginForm = document.getElementById('loginForm');
+            const googleBtn = document.getElementById('googleBtn');
+
+            function checkAuth() {
+                if (localStorage.getItem('isLoggedIn')) {
+                    loginPage.style.display = 'none';
+                    mainContent.style.display = 'block';
+                } else {
+                    loginPage.style.display = 'flex';
+                    mainContent.style.display = 'none';
+                }
+            }
+
+            // Initial Check
+            checkAuth();
+
+            // Login Handler
+            if (loginForm) {
+                loginForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+
+                    // Validation
+                    if (!email.includes('@') || !email.includes('.')) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                    if (password.length < 6) {
+                        alert('Password must be at least 6 characters long.');
+                        return;
+                    }
+
+                    // Simulate Auth
+                    const btn = document.querySelector('.login-btn');
+                    const originalText = btn.innerText;
+                    btn.innerText = 'Verifying...';
+
+                    setTimeout(() => {
+                        localStorage.setItem('isLoggedIn', 'true');
+                        localStorage.setItem('userEmail', email);
+                        checkAuth();
+                        btn.innerText = originalText;
+                    }, 1000);
+                });
+            }
+
+            // Google Handler
+            if (googleBtn) {
+                googleBtn.addEventListener('click', function () {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    checkAuth();
+                });
+            }
+
+            // Logout Handler (Global)
+            window.logout = function () {
+                localStorage.removeItem('isLoggedIn');
+                checkAuth();
+            };
+        </script>
+</body>
+
+</html>
